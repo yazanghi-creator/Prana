@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/booking',
+        destination: 'https://beautinda.de/artist/FrQzLyDtlESad90G8IAIHBfJGz63',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

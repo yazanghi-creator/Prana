@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/keep-alive?token=keep-alive-secret",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F4E1D2;
+  --background-secondary: #A8D5BA;
+  --foreground: #4B2E1A;
+  --primary: #2F4F4F;
+  --primary-hover: #1a3333;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility classes */
+.bg-cream {
+  background-color: #F4E1D2;
+}
+
+.bg-cream-dark {
+  background-color: #A8D5BA;
+}
+
+.text-primary {
+  color: #2F4F4F;
+}
+
+.bg-primary {
+  background-color: #2F4F4F;
+}
+
+.bg-primary:hover {
+  background-color: #1a3333;
+}
+
+.border-primary {
+  border-color: #2F4F4F;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button base styles */
+.btn-primary {
+  background-color: #2F4F4F;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #1a3333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(47, 79, 79, 0.3);
+}
+
+/* Card styles */
+.card {
+  background-color: #A8D5BA;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styling */
+.section {
+  padding: 5rem 0;
+}
+
+/* Gradient overlay for hero */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(244, 225, 210, 0.95) 0%, rgba(168, 213, 186, 0.9) 100%);
+}
+
+/* Time slot styles */
+.time-slot {
+  padding: 0.5rem 1rem;
+  border: 2px solid #A8D5BA;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.time-slot:hover:not(.time-slot-unavailable) {
+  border-color: #2F4F4F;
+  background-color: rgba(47, 79, 79, 0.1);
+}
+
+.time-slot-selected {
+  background-color: #2F4F4F;
+  color: white;
+  border-color: #2F4F4F;
+}
+
+.time-slot-unavailable {
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}

@@ -2,68 +2,128 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { Clock, Leaf, Dumbbell, Flame, Flower2, Zap } from "lucide-react";
+import { Clock, Leaf, Dumbbell, Flame, Flower2, Zap, Wind, Star } from "lucide-react";
 
 const services = [
   {
     id: 1,
-    name: "Relaxation Massage",
-    nameDe: "Entspannungsmassage",
+    name: "Pain-Free Massage – 60 min",
+    nameDe: "Schmerzfrei Massage – 60 Min.",
     description:
-      "A gentle, soothing massage designed to relieve stress and promote deep relaxation.",
+      "Targeted massage therapy to relieve pain and release deep-seated tension throughout the body.",
     descriptionDe:
-      "Eine sanfte, beruhigende Massage zur Stresslinderung und tiefen Entspannung.",
+      "Gezielte Massagetherapie zur Schmerzlinderung und Lösung tief sitzender Verspannungen im ganzen Körper.",
     duration: "60",
     price: "€75",
     Icon: Leaf,
   },
   {
     id: 2,
-    name: "Deep Tissue Massage",
-    nameDe: "Tiefengewebsmassage",
+    name: "Pain-Free Massage – 30 min",
+    nameDe: "Schmerzfrei Massage – 30 Min.",
     description:
-      "Targeted massage focusing on deeper muscle layers to release chronic tension.",
+      "A focused 30-minute session targeting your most painful areas for quick and effective relief.",
     descriptionDe:
-      "Gezielte Massage der tieferen Muskelschichten zur Lösung chronischer Verspannungen.",
-    duration: "60",
-    price: "€90",
-    Icon: Dumbbell,
+      "Eine gezielte 30-minütige Sitzung für die schmerzhaftesten Bereiche – schnelle und effektive Linderung.",
+    duration: "30",
+    price: "€50",
+    Icon: Zap,
   },
   {
     id: 3,
-    name: "Hot Stone Therapy",
-    nameDe: "Hot Stone Therapie",
+    name: "Cupping – Vacuum Therapy – Hijama",
+    nameDe: "Schröpfen – Vakuumpumpen – Hacamat – حجامة",
     description:
-      "Warm basalt stones combined with massage techniques for ultimate relaxation.",
+      "Traditional cupping therapy using vacuum suction to stimulate blood flow and relieve tension.",
     descriptionDe:
-      "Warme Basaltsteine kombiniert mit Massagetechniken für ultimative Entspannung.",
-    duration: "75",
-    price: "€110",
-    Icon: Flame,
+      "Traditionelle Schröpftherapie mit Vakuumsaugung zur Verbesserung der Durchblutung und Linderung von Verspannungen.",
+    duration: "60",
+    price: "€75",
+    Icon: Wind,
   },
   {
     id: 4,
-    name: "Aromatherapy Massage",
-    nameDe: "Aromatherapie Massage",
+    name: "Sports & Strong Massage",
+    nameDe: "Sport und Starke Massage",
     description:
-      "Essential oils blended for your needs enhance this relaxing massage experience.",
+      "Intensive massage for athletes and active people – prevents injuries and speeds up muscle recovery.",
     descriptionDe:
-      "Ätherische Öle, die auf Ihre Bedürfnisse abgestimmt sind, verbessern dieses entspannende Massageerlebnis.",
+      "Intensive Massage für Sportler und aktive Menschen – beugt Verletzungen vor und beschleunigt die Muskelregeneration.",
     duration: "60",
-    price: "€85",
-    Icon: Flower2,
+    price: "€95",
+    Icon: Dumbbell,
   },
   {
     id: 5,
-    name: "Sports Massage",
-    nameDe: "Sportmassage",
+    name: "Sports Massage – 30 min",
+    nameDe: "Starke Sport Massage – 30 Min.",
     description:
-      "Designed for active individuals to prevent injuries and speed up recovery.",
+      "A powerful 30-minute sports massage focused on muscle recovery and performance.",
     descriptionDe:
-      "Entwickelt für aktive Menschen zur Verletzungsprävention und schnelleren Erholung.",
-    duration: "45",
-    price: "€70",
+      "Eine kraftvolle 30-minütige Sportmassage für Muskelregeneration und Leistungssteigerung.",
+    duration: "30",
+    price: "€50",
     Icon: Zap,
+  },
+  {
+    id: 6,
+    name: "Hot Stone Massage",
+    nameDe: "Hot Stone Massage",
+    description:
+      "Warm basalt stones melt away tension while deeply relaxing your muscles and calming your mind.",
+    descriptionDe:
+      "Warme Basaltsteine lösen Verspannungen, entspannen die Muskeln tief und beruhigen den Geist.",
+    duration: "60",
+    price: "€75",
+    Icon: Flame,
+  },
+  {
+    id: 7,
+    name: "Aura & Chakra Cleansing – Energy Refilling",
+    nameDe: "Aura und Chakra Reinigung und Energie Ausfüllen",
+    description:
+      "A holistic energy treatment to cleanse your aura, balance your chakras and restore your inner energy.",
+    descriptionDe:
+      "Eine ganzheitliche Energiebehandlung zur Reinigung der Aura, Harmonisierung der Chakren und Wiederherstellung der inneren Energie.",
+    duration: "60",
+    price: "€75",
+    Icon: Flower2,
+  },
+  {
+    id: 8,
+    name: "Gentle Massage with Warm Oils – 30 min",
+    nameDe: "Sanft Massage mit Warmen Ölen – 30 Min.",
+    description:
+      "A gentle and nurturing 30-minute massage using warm oils to soothe the body and calm the mind.",
+    descriptionDe:
+      "Eine sanfte, pflegende 30-minütige Massage mit warmen Ölen zur Beruhigung von Körper und Geist.",
+    duration: "30",
+    price: "€38",
+    Icon: Leaf,
+  },
+  {
+    id: 9,
+    name: "Gentle Massage with Warm Oils – 90 min",
+    nameDe: "Sanft Massage mit Warmen Ölen – 90 Min.",
+    description:
+      "An extended 90-minute experience of pure relaxation with warm oils melting away all stress.",
+    descriptionDe:
+      "Ein ausgedehntes 90-minütiges Erlebnis tiefer Entspannung – warme Öle lösen jeden Stress.",
+    duration: "90",
+    price: "€125",
+    Icon: Leaf,
+  },
+  {
+    id: 10,
+    name: "Foot Reflexology – 60 min",
+    nameDe: "Reflexzonenmassage Füße – 60 Min.",
+    description:
+      "Therapeutic pressure on reflex zones of the feet to promote healing and balance in the whole body.",
+    descriptionDe:
+      "Therapeutischer Druck auf Reflexzonen der Füße zur Förderung der Heilung und Balance im gesamten Körper.",
+    duration: "60",
+    price: "€75",
+    Icon: Star,
   },
 ];
 

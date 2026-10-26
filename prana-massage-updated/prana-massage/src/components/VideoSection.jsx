@@ -21,18 +21,17 @@ export default function VideoSection() {
 
         {/* Video Embed */}
         <div className="rounded-3xl overflow-hidden shadow-2xl aspect-video">
-          <video
+          <iframe
             width="100%"
             height="100%"
-            controls
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/studio.mp4" type="video/mp4" />
-          </video>
+            src="https://www.youtube.com/embed/PtSXaPU0Pu8"
+            title="Wie funktioniert Prana-Heilung?"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>
   );
 }
-

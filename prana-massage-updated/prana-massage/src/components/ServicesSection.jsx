@@ -192,6 +192,11 @@ export default function ServicesSection() {
                 <Link
                   href="/booking"
                   className="block w-full text-center py-3 border-2 border-[#2F4F4F] text-[#2F4F4F] rounded-lg font-semibold hover:bg-[#2F4F4F] hover:text-white transition-all"
+                  onClick={() => {
+                    if (typeof window !== "undefined" && window.gtag_report_conversion) {
+                      window.gtag_report_conversion();
+                    }
+                  }}
                 >
                   {t("services.bookNow")}
                 </Link>

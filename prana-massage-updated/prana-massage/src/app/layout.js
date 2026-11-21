@@ -17,17 +17,71 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Prana Massage | Therapeutic Massage Therapy in Nürnberg",
+  title: "Prana Massage Praxis Nürnberg | Massage & Heilung in Nürnberg",
   description:
-    "Experience the healing power of therapeutic massage in Nürnberg. Our expert therapists are dedicated to helping you achieve balance, relaxation, and wellness.",
+    "Prana Massage Praxis in Nürnberg Sulzbacher Str. 94 – Schmerzfrei Massage, Hot Stone, Schröpfen, Reflexzonenmassage & mehr. Jetzt Termin buchen! ⭐ 5.0 Sterne · 706 Bewertungen.",
   keywords:
-    "massage, therapy, relaxation, wellness, deep tissue, hot stone, aromatherapy, Nürnberg, Germany",
+    "Massage Nürnberg, Massagepraxis Nürnberg, Schmerzfrei Massage Nürnberg, Hot Stone Massage Nürnberg, Schröpfen Nürnberg, Hacamat Nürnberg, Reflexzonenmassage Nürnberg, Sportmassage Nürnberg, Prana Massage, Massage Sulzbacher Straße",
+  openGraph: {
+    title: "Prana Massage Praxis Nürnberg",
+    description:
+      "Professionelle Massage-Therapie in Nürnberg. Schmerzfrei Massage, Hot Stone, Schröpfen & mehr. ⭐ 5.0 · 706 Bewertungen.",
+    url: "https://www.prana-massage.com",
+    siteName: "Prana Massage Praxis",
+    locale: "de_DE",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.prana-massage.com",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="de" className="scroll-smooth">
       <head>
+        {/* Local Business JSON-LD Structured Data */}
+        <Script id="local-business-schema" type="application/ld+json" strategy="beforeInteractive">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "HealthAndBeautyBusiness",
+            "name": "Prana Massage Praxis",
+            "image": "https://www.prana-massage.com/logo.png",
+            "url": "https://www.prana-massage.com",
+            "telephone": "+4917621440748",
+            "email": "pranaway7@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Sulzbacher Str. 94",
+              "addressLocality": "Nürnberg",
+              "postalCode": "90489",
+              "addressCountry": "DE"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 49.4593,
+              "longitude": 11.1078
+            },
+            "openingHoursSpecification": [
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "20:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "706"
+            },
+            "priceRange": "€€",
+            "currenciesAccepted": "EUR",
+            "paymentAccepted": "Cash, Credit Card",
+            "areaServed": "Nürnberg",
+            "serviceType": ["Schmerzfrei Massage", "Hot Stone Massage", "Schröpfen", "Reflexzonenmassage", "Sportmassage", "Aura und Chakra Reinigung"]
+          }`}
+        </Script>
         {/* Google Consent Mode v2 - must run BEFORE the Google Tag */}
         <Script id="consent-mode-default" strategy="beforeInteractive">
           {`

@@ -140,6 +140,19 @@ export default function ContactSection() {
 
           {/* Contact Form */}
           <div className="bg-[#F4E1D2] rounded-2xl p-8 shadow-lg">
+            {/* Google Maps Embed */}
+            <div className="rounded-xl overflow-hidden mb-8 shadow-md aspect-video">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.4!2d11.1078!3d49.4593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57a3e0a1a1a1%3A0x1!2sSulzbacher+Str.+94%2C+90489+N%C3%BCrnberg!5e0!3m2!1sde!2sde!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Prana Massage Praxis Standort"
+              />
+            </div>
             <h3 className="text-2xl font-bold text-[#4B2E1A] mb-6">
               {t("contact.formTitle")}
             </h3>

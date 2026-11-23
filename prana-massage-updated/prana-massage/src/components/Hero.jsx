@@ -42,11 +42,6 @@ export default function Hero() {
               <Link
                 href="/booking"
                 className="btn-primary text-center text-lg px-8 py-4"
-                onClick={() => {
-                  if (typeof window !== "undefined" && window.gtag_report_conversion) {
-                    window.gtag_report_conversion();
-                  }
-                }}
               >
                 {t("hero.bookAppointment")}
               </Link>

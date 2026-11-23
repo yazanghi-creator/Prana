@@ -122,6 +122,23 @@ export default function RootLayout({ children }) {
               });
               return false;
             }
+
+            // Fire the "Termin Buchen Prana" conversion for every booking link
+            // (header, hero, services, products, footer, mobile menu).
+            // Capture phase so it runs before Next.js handles the navigation.
+            document.addEventListener('click', function (e) {
+              var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+              if (!link) return;
+              var path;
+              try { path = new URL(link.href, window.location.href).pathname; } catch (err) { return; }
+              if (path !== '/booking' && path !== '/booking/') return;
+              gtag('event', 'conversion', {
+                'send_to': 'AW-16521107857/sOsdCI6Cy7IdEJGz8MU9',
+                'value': 1.0,
+                'currency': 'EUR',
+                'transport_type': 'beacon'
+              });
+            }, true);
           `}
         </Script>
       </head>

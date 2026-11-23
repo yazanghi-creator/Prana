@@ -62,7 +62,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#4B2E1A]">
-                      500+ {t("about.clients")}
+                      700+ {t("about.clients")}
                     </p>
                     <p className="text-sm text-gray-500">
                       {t("about.treated")}

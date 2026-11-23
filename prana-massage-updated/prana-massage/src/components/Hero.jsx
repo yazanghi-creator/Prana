@@ -61,7 +61,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="flex justify-center lg:justify-start gap-8 mt-12">
               <div className="text-center">
-                <p className="text-3xl font-bold text-[#2F4F4F]">500+</p>
+                <p className="text-3xl font-bold text-[#2F4F4F]">700+</p>
                 <p className="text-sm text-[#4B2E1A]/60">
                   {t("hero.happyClients")}
                 </p>
